@@ -16,5 +16,9 @@ class Event
     @ages.min
   end
 
+  def average_age
+    @ages.sum / @ages.length.to_f
+  end
+
 
 end
