@@ -29,13 +29,11 @@ class TestEvent < Minitest::Test
   end
 
   def test_average_age_method
-    assert_equal 26.6, @event.average_age 
+    assert_equal 26.6, @event.average_age
+  end
+
+  def test_standard_deviation_age_method
+    assert_equal 8.28, @event.standard_deviation_age
   end
 
 end
-
-# pry(main)> event.average_age
-# #=> 26.6
-#
-# pry(main)> event.standard_deviation_age
-# #=> 8.28
