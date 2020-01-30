@@ -20,5 +20,8 @@ class Event
     @ages.sum / @ages.length.to_f
   end
 
+  def standard_deviation_age
+    standard_deviation(@ages)
+  end
 
 end
