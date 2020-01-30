@@ -20,6 +20,10 @@ class TestEvent < Minitest::Test
     assert_equal [24, 30, 18, 20, 41], @event.ages
   end
 
+  def test_max_age_method
+    assert_equal 41, @event.max_age
+  end
+
 end
 
 # pry(main)> event.max_age
