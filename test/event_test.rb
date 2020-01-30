@@ -3,25 +3,25 @@ require "minitest/pride"
 require "./lib/event"
 
 class TestEvent < Minitest::Test
-  def test_that_it_exists
-    event = Event.new("Curling", [24, 30, 18, 20, 41])
 
-    assert_instance_of Event, event
+  def setup
+    @event = Event.new("Curling", [24, 30, 18, 20, 41])
+  end
+
+  def test_that_it_exists
+    assert_instance_of Event, @event
   end
 
   def test_has_a_name
-    event = Event.new("Curling", [24, 30, 18, 20, 41])
-
-    assert_equal "Curling", event.name
+    assert_equal "Curling", @event.name
   end
+
+  def test_can_call_to_ages_variable
+    assert_equal [24, 30, 18, 20, 41], @event.ages
+  end
+
 end
 
-# pry(main)> event.name
-# #=> "Curling"
-#
-# pry(main)> event.ages
-# #=> [24, 30, 18, 20, 41]
-#
 # pry(main)> event.max_age
 # #=> 41
 #
