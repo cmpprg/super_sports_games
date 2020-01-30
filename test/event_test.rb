@@ -24,14 +24,12 @@ class TestEvent < Minitest::Test
     assert_equal 41, @event.max_age
   end
 
+  def test_min_age_method
+    assert_equal 18, @event.min_age
+  end
+
 end
 
-# pry(main)> event.max_age
-# #=> 41
-#
-# pry(main)> event.min_age
-# #=> 18
-#
 # pry(main)> event.average_age
 # #=> 26.6
 #
